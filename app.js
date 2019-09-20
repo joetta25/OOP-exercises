@@ -21,7 +21,7 @@ let jordan = new Person('Jordan','jordan@aol.com','495-586-3456');
 console.log(`phone: ${jordan.phone}, email: ${jordan.email}`);
 console.log(`phone: ${sonny.phone}, email: ${sonny.email}`);
 
-
+///******************************************************* */
 class Card {
     constructor ( point , suit,) {
         this.point = point;
@@ -36,6 +36,8 @@ let myCard = new Card(5, 'diamond');
 console.log(myCard);
 myCard.getImageURL();
 
+
+//******************************************************************** */
 class Hand {
     constructor(){
  this.cards = [];
@@ -50,4 +52,28 @@ getPoints(){
     })
     return total;
 }
+}
+
+
+///******************************************************* */
+
+class Deck {
+    constructor() {
+        this.cards = [];
+        const suits = [
+            'clubs',
+            'diamonds',
+            'hearts',
+            'spades',
+        ];
+
+     suits.forEach(suit => {
+        for (let i = 1; i < 14; i++) {
+            this.cards.push(new Card(i, suit));
+        } 
+        
+        })
+    
+    }
+    
 }
